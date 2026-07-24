@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dark background with subtle grid pattern -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <path android:fillColor="#050508" android:pathData="M0,0 H108 V108 H0 Z" />
+
+    <!-- Subtle grid lines (Tron-like) -->
+    <path android:strokeColor="#0F0F1A" android:strokeWidth="0.5"
+        android:pathData="M0,18 H108 M0,36 H108 M0,54 H108 M0,72 H108 M0,90 H108
+                          M18,0 V108 M36,0 V108 M54,0 V108 M72,0 V108 M90,0 V108" />
+
+    <!-- Glow accent -->
+    <path android:fillColor="#1A00F0FF" android:pathData="M0,0 H108 V12 H0 Z" />
+    <path android:fillColor="#1AFF00AA" android:pathData="M0,96 H108 V108 H0 Z" />
+</vector>

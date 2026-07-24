@@ -1,0 +1,15 @@
+package com.jeager22.nonton.data.entity
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "favorites")
+data class FavoriteEntity(
+    @PrimaryKey val videoId: String,
+    val title: String,
+    val author: String,
+    val authorId: String,
+    val thumbnailUrl: String,
+    val lengthSeconds: Int,
+    val addedAt: Long
+)

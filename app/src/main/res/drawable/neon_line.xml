@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Static neon gradient line; untuk efek "flowing" dianimasikan via JavaScript di WebView -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:startColor="#00f0ff"
+        android:centerColor="#ff00aa"
+        android:endColor="#7b2fff"
+        android:angle="0" />
+    <size android:height="2dp" />
+</shape>

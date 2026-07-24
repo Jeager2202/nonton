@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#050508">
+
+    <!-- Fullscreen cyberpunk UI rendered from assets/app/index.html -->
+    <WebView
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Hidden native controls kept for compatibility with MainActivity wiring -->
+    <EditText
+        android:id="@+id/nativeSearch"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:id="@+id/license"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:id="@+id/settings"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <!-- ExoPlayer native layer. The WebView renders custom controls above it. -->
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/player"
+        android:visibility="gone"
+        android:layout_gravity="top"
+        android:layout_marginTop="58dp"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="#000000"
+        app:use_controller="false"
+        app:resize_mode="fit" />
+
+    <FrameLayout
+        android:id="@+id/miniPlayer"
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:layout_margin="14dp"
+        android:background="#EE0B0B16"
+        android:layout_width="match_parent"
+        android:layout_height="68dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/miniThumb"
+                android:layout_width="104dp"
+                android:layout_height="58dp"
+                android:scaleType="centerCrop"
+                android:background="#000000" />
+
+            <TextView
+                android:id="@+id/miniTitle"
+                android:text="NONTON ORBIT PLAYER"
+                android:textColor="#E8F8FF"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/miniPlayPause"
+                android:text="⏸"
+                android:textColor="#00F0FF"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_width="42dp"
+                android:layout_height="42dp" />
+
+            <TextView
+                android:id="@+id/miniClose"
+                android:text="✕"
+                android:textColor="#FF00AA"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_width="42dp"
+                android:layout_height="42dp" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>
